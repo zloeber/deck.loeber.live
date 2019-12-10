@@ -1,0 +1,9 @@
+baseURL = "https://deck.loeber.live/"
+languageCode = "en-us"
+title = "Zachary Loeber's Slide Decks"
+theme = "reveal-hugo"
+
+[outputFormats.Reveal]
+baseName = "index"
+mediaType = "text/html"
+isHTML = true
