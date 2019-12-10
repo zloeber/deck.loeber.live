@@ -8,7 +8,7 @@ trigger:
 # Don't trigger on PRs
 pr: none
 
-resources:         
+resources:
   repositories:
   - repository: pipelines
     type: github
