@@ -1,0 +1,19 @@
+services:
+# A static site definition for render.com, nifty!
+- type: web
+  name: zacharyloeber-decks-dev
+  env: static
+  repo: https://github.com/zloeber/deck.loeber.live.git
+  branch: master
+  staticPublishPath: ./testsite
+  domains:
+    - testdeck.loeber.live
+
+- type: web
+  name: zacharyloeber-decks-prod
+  env: static
+  repo: https://github.com/zloeber/deck.loeber.live.git
+  branch: master
+  staticPublishPath: ./public
+  domains:
+    - deck.loeber.live
