@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>DevOps</title>
+
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/reveal-js/css/reset.css">
+<link rel="stylesheet" href="/reveal-js/css/reveal.css"><link rel="stylesheet" href="/reveal-js/css/theme/night.css" id="theme">
+<link rel="stylesheet" href="/highlight-js/solarized-dark.min.css">
+    
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+  
+
+    
+
+
+<section data-noprocess data-shortcode-slide
+      data-background-image="./images/background2.jpg"
+      data-background-position="center"
+      data-background-size="100%"
+      id="index"
+      data-transition="convex">
+  
+
+<h1 id="devops-101">DevOps 101</h1>
+
+<p>By Zachary Loeber</p>
+
+
+
+
+<aside class="notes"><p>If the audience size is small perhaps give 5 min to do introductions.</p>
+</aside>
+</section>
+
+  
+
+    
+
+
+<section data-noprocess data-shortcode-slide
+      data-background-image="./images/darkbackground1.jpg"
+      data-background-position="center"
+      data-background-size="100%"
+      id="bio"
+      data-transition="convex">
+  
+
+<h2 id="who-am-i">Who Am I?</h2>
+
+<ul>
+<li>Technology agnostic IT infrastructure and automation geek for 20+ years</li>
+<li>A Sr. Consultant on the Cloud team at SPR</li>
+<li>Currently working with Azure, Linux, Kubernetes, and Spark DevOps pipelines</li>
+<li>Releaser of voluminous amounts of PowerShell/Bash/Python code</li>
+<li>Recent contributor/releaser of open source tools</li>
+<li>Has an unhealthly respect for a good Makefile&hellip;</li>
+</ul>
+</section>
+    
+<section data-noprocess data-shortcode-slide
+      data-background-image="./images/darkbackground3.jpg"
+      data-background-position="center"
+      data-background-size="100%"
+      id="intro"
+      data-transition="convex">
+  
+
+<section data-shortcode-section>
+<h2 id="what-is-devops">What is DevOps?</h2>
+
+<ul>
+<li>The merger of &lt;Some Action&gt; and IT operations with the purpose of increasing value to stakeholders.</li>
+</ul>
+
+</section><section>
+
+<p><span class='fragment '
+  >
+  <strong>Development</strong>
+</span> + <span class='fragment '
+  >
+  <strong>Operations</strong>
+</span> = <span class='fragment '
+  >
+  <strong>DevOps</strong>
+</span></p>
+
+<ul>
+<li><span class='fragment '
+>
+The merger of development and IT operations with the purpose of increasing value to stakeholders.
+</span></li>
+<li><span class='fragment '
+>
+DevOps has paved the way with well defined models to achieve the <strong>3-ways</strong> of Devops&hellip;
+</span></li>
+</ul>
+</section>
+</section>
+    
+<section data-noprocess data-shortcode-slide
+      data-background-image="./images/darkbackground4.jpg"
+      data-background-position="fade"
+      data-background-size="100%"
+      id="3ways"
+      data-transition="convex">
+  
+
+<section data-shortcode-section>
+<h2 id="the-3-ways-of-devops">The 3 Ways of DevOps</h2>
+
+</section><section>
+
+<h3 id="work-flows-one-direction-downstream">Work flows one direction, downstream.</h3>
+
+<ul>
+<li>Systems and holistic thinking</li>
+<li>Focus on value streams</li>
+<li>Don&rsquo;t pass defects downstream</li>
+</ul>
+
+</section><section>
+
+<h3 id="create-shorten-and-amplify-feedback-loops">Create, shorten, and amplify feedback loops.</h3>
+
+<ul>
+<li>Increase Velocity</li>
+<li>Incremental Progress</li>
+<li>Fail Fast, Fix Fast</li>
+</ul>
+
+</section><section>
+
+<h3 id="continued-experimentation-and-learning">Continued experimentation and learning</h3>
+
+<ul>
+<li>Continually Improve</li>
+<li>Build Knowledge</li>
+<li>Increase Resilience</li>
+</ul>
+</section>
+</section>
+    
+<section data-noprocess data-shortcode-slide
+      data-background-image="./images/background6.jpg"
+      data-background-position="center"
+      data-background-size="100%"
+      id="cicd0"
+      data-transition="convex">
+  
+
+<section data-shortcode-section>
+<h2 id="ci-cd">CI/CD</h2>
+
+<p>This model is deceptively simple. It&rsquo;s component parts are:</p>
+
+<ul>
+<li><span class='fragment '
+>
+<em>Continuous Integration</em>
+</span></li>
+<li><span class='fragment '
+>
+<em>Continuous Delivery</em>
+</span>
+<span class='fragment '
+>
+/<em>Continuous Deployment</em>
+</span>
+<span class='fragment '
+>
+(Automatic deployment to an environment)
+</span></li>
+</ul>
+
+<aside class="notes"><p>Don&rsquo;t forget the most important one! :)</p>
+</aside>
+
+</section><section>
+
+<h2 id="the-hidden-ci">The hidden <strong>CI</strong></h2>
+
+<p><strong>Continuous Improvement</strong></p>
+
+<p>If this is not happening then you are on a different model.</p>
+
+<aside class="notes"><p>One might say that without the goal of improvement you are on a sunsetting model.</p>
+</aside>
+
+</section><section>
+
+<h2 id="cicd-crawl">CICD - Crawl</h2>
+
+<ul>
+<li>Version Control - Maybe</li>
+<li>Build Artifact</li>
+<li>Deploy Artifact - One Environment</li>
+</ul>
+
+</section><section>
+
+<h2 id="cicd-walk">CICD - Walk</h2>
+
+<ul>
+<li>Version Control - Absolutely</li>
+<li>Build Artifact</li>
+<li>Tag Artifact</li>
+<li>Push - Docker/Artifactory/Helm</li>
+<li>Deploy Artifact <span class='fragment '
+>
+
+<ul>
+<li>Multiple Environments
+</span></li>
+</ul></li>
+</ul>
+
+<aside class="notes"><p>Deployment into multiple environments infers parameterization and possibly infrastructure as code.</p>
+</aside>
+
+</section><section>
+
+<h2 id="cicd-run">CICD - Run</h2>
+
+<ul>
+<li>Version Control - Git Branch Model Established</li>
+<li>Unit Tests</li>
+<li>Build Artifact</li>
+<li>Tag Artifact</li>
+<li>Push - Docker/Artifactory/Helm</li>
+<li>Deploy Infrastructure - Terraform/Ansible/Pulumi/Other</li>
+<li>Deploy Artifact - Multiple Environments</li>
+</ul>
+
+</section><section>
+
+<h2 id="cicd-sprint">CICD - Sprint</h2>
+
+<ul>
+<li>Version Control - Git Branch Model Established</li>
+<li>Code Coverage/Quality</li>
+<li>Unit Testing</li>
+<li>Build Artifact</li>
+<li>Tag Artifact</li>
+<li>Push - Docker/Artifactory/Helm</li>
+<li>Deploy Infrastructure - Terraform/Ansible/Pulumi/Other</li>
+<li>Deploy Artifact - Multiple Scalable Environments</li>
+</ul>
+
+<aside class="notes"><p>It should be noted that some of these stages can get their own lesser versions of a CI/CD pipeline as well!</p>
+</aside>
+
+</section><section>
+
+<p>A great conceptual model (Jenkins-x).</p>
+
+<p><img src="./images/jxconceptualmodel.png" alt="A Good Diagram" title="JX Conceptual Model" /></p>
+
+<aside class="notes"><p>Even though this model was put together purely for cloud native deployments it helps understand how teams, the business, and CICD are interelated. I&rsquo;ve personally used similar types of logical models when fielding multiple team&rsquo;s devops needs.</p>
+</aside>
+
+</section><section>
+
+<h2 id="ci-building">CI (Building)</h2>
+
+<p>The build process is generally broken into the following parts</p>
+
+<ul>
+<li><span class='fragment '
+>
+<em>Build</em>
+</span></li>
+<li><span class='fragment '
+>
+<em>Tag</em>
+</span></li>
+<li><span class='fragment '
+>
+<em>Push</em>
+</span></li>
+</ul>
+
+</section>
+</section>
+    
+<section data-noprocess data-shortcode-slide
+      data-background-image="./images/darkbackground1.jpg"
+      data-background-position="center"
+      data-background-size="100%"
+      id="components"
+      data-transition="fade">
+  
+
+<section data-shortcode-section>
+<h2 id="devops-components">DevOps Components</h2>
+
+<p>DevOps takes many forms but ultimately boils down to a handful of components working together;</p>
+
+<ol>
+<li>Version Control</li>
+<li>Pipelines</li>
+<li>Artifacts</li>
+</ol>
+
+<p>The components above work for simple software releases.</p>
+
+<aside class="notes"><ul>
+<li>Technically generating the &lsquo;Artifact&rsquo; is the CD portion.</li>
+<li>Artifact&rsquo;s could be a software release, docker image, or more&hellip;</li>
+<li>Often this small workflow wraps up the entire CI part of a larger CICD engine.</li>
+</ul>
+</aside>
+
+</section><section>
+
+<p>But there is always &lsquo;More&rsquo;&hellip;</p>
+
+</section><section>
+
+<h2 id="deployment-environments">Deployment Environments</h2>
+
+<p>Anything more advanced usually include</p>
+
+<ol>
+<li><span class='fragment '
+>
+Service Endpoints
+</span></li>
+<li><span class='fragment '
+>
+Metadata Management (Parameter)
+</span></li>
+<li><span class='fragment '
+>
+Workload Sizing
+</span></li>
+<li><span class='fragment '
+>
+Gates/Approvals/Processes
+</span></li>
+<li><span class='fragment '
+>
+Governance/Security
+</span></li>
+</ol>
+
+</section>
+</section>
+    <p>
+<section data-noprocess data-shortcode-slide
+      id="lessons"
+      data-transition="slide">
+  
+<section data-shortcode-section>
+<h3 id="lessons-learned">Lessons Learned</h3></p>
+
+<p>There are many best practices for DevOps, these are some I hope stick.</p>
+
+<ul>
+<li><span class='fragment '
+>
+&#39;Latest&#39; tag is evil
+</span></li>
+<li><span class='fragment '
+>
+Git branch models rule
+</span></li>
+<li><span class='fragment '
+>
+Firm divide between CI &amp; CD
+</span></li>
+<li><span class='fragment '
+>
+Start a release cadence
+</span></li>
+<li><span class='fragment '
+>
+Learn Agile
+</span></li>
+</ul>
+
+<p><aside class="notes"><ul>
+<li>Data scientists create models more like artists than programmers.</li>
+<li>Their output is primarily the models they construct.</li>
+</ul>
+</aside>
+</section></p>
+</section>
+    <p>
+<section data-noprocess data-shortcode-slide
+      id="modelbreakers"
+      data-transition="concave">
+  
+<section data-shortcode-section>
+<h1 id="model-breakers">Model Breakers</h1></p>
+
+<p>Some IT does not easily fit into the traditional DevOps CICD model:</p>
+
+<ul>
+<li><span class='fragment '
+>
+Data Science
+</span></li>
+<li><span class='fragment '
+>
+Data Engineering
+</span></li>
+<li><span class='fragment '
+>
+Data Anything
+</span></li>
+</ul>
+
+<p><aside class="notes"><ul>
+<li>Data scientists create models more like artists than programmers.</li>
+<li>Their output is primarily the models they construct.</li>
+</ul>
+</aside>
+</section></p>
+</section>
+    
+
+
+<section data-noprocess data-shortcode-slide
+      id="references"
+      data-transition="convex">
+  
+
+<h2 id="references">References</h2>
+
+<ul>
+<li>Three ways of devops - <a href="https://itrevolution.com/the-three-ways-principles-underpinning-devops/">https://itrevolution.com/the-three-ways-principles-underpinning-devops/</a></li>
+<li>hugo - <a href="https://gohugo.io/">https://gohugo.io/</a></li>
+<li>reveal.js - <a href="https://github.com/hakimel/reveal.js">https://github.com/hakimel/reveal.js</a></li>
+<li>render.com - Hosts this site</li>
+<li>cloudflare.com - dns/registrar</li>
+</ul>
+</section>
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/reveal-hugo/object-assign.js></script>
+
+<a href="/reveal-js/css/print/" id="print-location" style="display: none;"></a>
+<script type="text/javascript">
+  var printLocationElement = document.getElementById('print-location');
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = printLocationElement.href + (window.location.search.match(/print-pdf/gi) ? 'pdf.css' : 'paper.css');
+  document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script type="application/json" id="reveal-hugo-site-params">null</script>
+<script type="application/json" id="reveal-hugo-page-params">{"highlight_theme":"solarized-dark","slide_number":true,"theme":"night","transition":"convex","weight":1}</script>
+
+<script src="/reveal-js/js/reveal.js"></script>
+
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+  
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+  var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams));
+  Reveal.initialize(options);
+</script>
+
+
+  
+  
+  <script type="text/javascript" src="/reveal-js/plugin/markdown/marked.js"></script>
+  
+  <script type="text/javascript" src="/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/reveal-js/plugin/zoom-js/zoom.js"></script>
+  
+  
+  <script type="text/javascript" src="/reveal-js/plugin/notes/notes.js"></script>
+
+
+
+    
+    
+  </body>
+</html>
