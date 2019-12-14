@@ -51,6 +51,6 @@ stages:
     repo: 'https://github.com/zloeber/deck.loeber.live.git'
     branch: 'master'
     path: 'public'
-    environment: 'prod'
+    environment: 'production'
     target: 'prod'
     pipelineartifact: 'prodartifact'
