@@ -5,4 +5,4 @@ mermaid = true
 +++
 
 # Zachary Loeber's Presentations
-[Directory](./slides)
+[Directory](/slides/index.html)
