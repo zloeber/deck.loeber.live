@@ -4,7 +4,6 @@ outputs = ["Reveal"]
 
 [reveal_hugo]
 highlight_theme = "solarized-dark"
-slide_number = true
 transition = "convex"
 weight = 1
 theme = "night"
@@ -21,6 +20,7 @@ theme = "night"
 ## Zachs Slide Decks
 
 [Directory](/slides/index.html)
+
 - Navigation (up, down, left, right)
 - Overview (etc)
 - Speaker Notes (s)

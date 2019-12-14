@@ -22,7 +22,6 @@ theme = "night"
 
 By Zachary Loeber
 
-
 {{% note %}}
 If the audience size is small perhaps give 5 min to do introductions and illicit feedback on what they look to gain from this presentation.
 {{% /note %}}
