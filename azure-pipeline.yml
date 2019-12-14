@@ -26,6 +26,7 @@ stages:
     contentpath: './content'
     drafts: 'true'
     target: 'dev'
+    artifact: 'devartifact'
 - template: deploy/git-folder.yml@pipelines
   parameters:
     repo: 'https://github.com/zloeber/deck.loeber.live.git'
@@ -33,6 +34,7 @@ stages:
     path: 'testsite'
     environment: 'dev'
     target: 'dev'
+    artifact: 'devartifact'
 
 ## Build Hugo site (PROD)
 - template: build/hugo-generate.yml@pipelines
@@ -43,6 +45,7 @@ stages:
     outputpath: './public'
     contentpath: './content'
     target: 'prod'
+    artifact: 'prodartifact'
 - template: deploy/git-folder.yml@pipelines
   parameters:
     repo: 'https://github.com/zloeber/deck.loeber.live.git'
@@ -50,3 +53,4 @@ stages:
     path: 'public'
     environment: 'prod'
     target: 'prod'
+    artifact: 'prodartifact'
