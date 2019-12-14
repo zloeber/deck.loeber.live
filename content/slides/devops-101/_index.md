@@ -1,6 +1,7 @@
 +++
-title = "DevOps"
+title = "DevOps 101"
 outputs = ["Reveal"]
+
 [reveal_hugo]
 highlight_theme = "solarized-dark"
 slide_number = true
@@ -23,6 +24,6 @@ By Zachary Loeber
 
 
 {{% note %}}
-If the audience size is small perhaps give 5 min to do introductions.
+If the audience size is small perhaps give 5 min to do introductions and illicit feedback on what they look to gain from this presentation.
 {{% /note %}}
 

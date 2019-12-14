@@ -1,8 +1,28 @@
 +++
 title = "My presentations"
 outputs = ["Reveal"]
-mermaid = true
+
+[reveal_hugo]
+highlight_theme = "solarized-dark"
+slide_number = true
+transition = "convex"
+weight = 1
+theme = "night"
 +++
 
-# Zachary Loeber's Presentations
-[Directory](/slides/index.html)
+{{< slide 
+    id="home" 
+    transition="fade" 
+    background-image="./images/darkbackground4.jpg" 
+    background-size=100%
+    background-position="fade"
+>}}
+
+## Zachs Slide Decks
+
+[Directory](slides/index.html)
+
+- Navigation (up, down, left, right)
+- Overview (etc)
+- Speaker Notes (s)
+- Full Screen (f)
