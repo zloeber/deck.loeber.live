@@ -34,7 +34,7 @@ stages:
     path: 'testsite'
     environment: 'dev'
     target: 'dev'
-    artifact: 'devartifact'
+    pipelineartifact: 'devartifact'
 
 ## Build Hugo site (PROD)
 - template: build/hugo-generate.yml@pipelines
@@ -53,4 +53,4 @@ stages:
     path: 'public'
     environment: 'prod'
     target: 'prod'
-    artifact: 'prodartifact'
+    pipelineartifact: 'prodartifact'
