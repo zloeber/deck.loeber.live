@@ -8,5 +8,4 @@ weight = 1000
 - Three ways of devops - <https://itrevolution.com/the-three-ways-principles-underpinning-devops/>
 - hugo - <https://gohugo.io/>
 - reveal.js - <https://github.com/hakimel/reveal.js>
-- render.com - Hosts this site
-- cloudflare.com - dns/registrar
+- render.com - Hosts https://decks.loeber.live (this presentation)

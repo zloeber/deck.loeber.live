@@ -20,8 +20,7 @@ theme = "night"
 
 ## Zachs Slide Decks
 
-[Directory](slides/index.html)
-
+[Directory](/slides/index.html)
 - Navigation (up, down, left, right)
 - Overview (etc)
 - Speaker Notes (s)
