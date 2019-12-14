@@ -21,7 +21,7 @@ stages:
   parameters:
     initialize: true
     baseurl: 'https://zacharyloeber-decks.onrender.com/'
-    testhtml: 'true'
+    testhtml: 'false'
     outputpath: './testsite'
     contentpath: './content'
     drafts: 'true'
@@ -41,7 +41,7 @@ stages:
   parameters:
     initialize: true
     baseurl: 'https://deck.loeber.live/'
-    testhtml: 'true'
+    testhtml: 'false'
     outputpath: './public'
     contentpath: './content'
     target: 'prod'
