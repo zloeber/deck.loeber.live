@@ -38,10 +38,14 @@ But there is always 'More'...
 
 Anything more advanced usually include
 
-1. {{< frag c="Service Endpoints" >}}
-1. {{< frag c="Metadata Management (Parameter)" >}}
-1. {{< frag c="Workload Sizing" >}}
+1. {{< frag c="Service Endpoints (Secrets)" >}}
+1. {{< frag c="Metadata Management (Parameters)" >}}
+1. {{< frag c="Workload Sizing ()" >}}
 1. {{< frag c="Gates/Approvals/Processes" >}}
 1. {{< frag c="Governance/Security" >}}
+
+---
+
+The DevOps engineer will wrap these together with CI/CD into **Pipelines**
 
 {{% /section %}}

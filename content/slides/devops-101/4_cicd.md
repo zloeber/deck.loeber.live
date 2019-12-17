@@ -4,7 +4,7 @@ weight = 40
 +++
 
 {{< slide 
-    id="cicd0" 
+    id="cicd" 
     transition="convex" 
     background-image="./images/background6.jpg" 
     background-size=100%

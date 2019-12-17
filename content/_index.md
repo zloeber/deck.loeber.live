@@ -19,7 +19,7 @@ theme = "night"
 
 ## Zachs Slide Decks
 
-[Directory](/slides/index.html)
+[DevOps 101](/slides/devops-101/index.html)
 
 - Navigation (up, down, left, right)
 - Overview (etc)
