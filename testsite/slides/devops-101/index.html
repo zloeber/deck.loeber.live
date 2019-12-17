@@ -153,7 +153,7 @@ DevOps has paved the way with well defined models to achieve the <strong>3-ways<
       data-background-image="./images/background6.jpg"
       data-background-position="center"
       data-background-size="100%"
-      id="cicd0"
+      id="cicd"
       data-transition="convex">
   
 
@@ -332,15 +332,15 @@ DevOps has paved the way with well defined models to achieve the <strong>3-ways<
 <ol>
 <li><span class='fragment '
 >
-Service Endpoints
+Service Endpoints (Secrets)
 </span></li>
 <li><span class='fragment '
 >
-Metadata Management (Parameter)
+Metadata Management (Parameters)
 </span></li>
 <li><span class='fragment '
 >
-Workload Sizing
+Workload Sizing ()
 </span></li>
 <li><span class='fragment '
 >
@@ -351,6 +351,140 @@ Gates/Approvals/Processes
 Governance/Security
 </span></li>
 </ol>
+
+</section><section>
+
+<p>The DevOps engineer will wrap these together with CI/CD into <strong>Pipelines</strong></p>
+
+</section>
+</section>
+    
+<section data-noprocess data-shortcode-slide
+      data-background-image="./images/darkbackground1.jpg"
+      data-background-position="center"
+      data-background-size="100%"
+      id="pipelines"
+      data-transition="convex">
+  
+
+<section data-shortcode-section>
+<h2 id="pipeline-products">Pipeline Products</h2>
+
+<p>One can weave together pipelines with a number of tools;</p>
+
+<ol>
+<li><span class='fragment '
+>
+Jenkins/Jenkins-x
+</span></li>
+<li><span class='fragment '
+>
+CircleCI
+</span></li>
+<li><span class='fragment '
+>
+Semaphore
+</span></li>
+<li><span class='fragment '
+>
+Tekton
+</span></li>
+<li><span class='fragment '
+>
+Azure DevOps
+</span></li>
+</ol>
+
+</section><section>
+
+<h2 id="azure-devops-pipelines">Azure DevOps Pipelines</h2>
+
+<p>The Azure PaaS solution for creating pipelines is Azure DevOps.</p>
+
+<ul>
+<li><span class='fragment '
+>
+AKA -&gt; VSTS Online
+</span></li>
+</ul>
+
+</section><section>
+
+<h2 id="ado-classic-pipelines">ADO Classic Pipelines</h2>
+
+<p>There are 2 parts to classic pipelines;</p>
+
+<ol>
+<li><span class='fragment '
+>
+Build Pipeline
+</span></li>
+<li><span class='fragment '
+>
+Release Pipeline
+</span></li>
+</ol>
+
+</section><section>
+
+<h2 id="ado-classic-pipelines-1">ADO Classic Pipelines</h2>
+
+<p>The build pipeline can reside as YAML code in the source repository (azure-pipeline.yaml).</p>
+
+<p>The release pipeline is pretty much a manual affair (unless you are clever with json and apis)</p>
+
+</section><section>
+
+<h3 id="classic-pipeline-notes">Classic Pipeline Notes</h3>
+
+<ul>
+<li>Build pipelines can be declarative YAML in the source repo</li>
+<li>Release pipelines are entirely manual (ClickOps!)</li>
+<li>There is a &lsquo;hidden&rsquo; pipeline artifact repository that bridge the two</li>
+<li>It is smart to use your own artifact repository instead (just sayin&rsquo;)</li>
+<li>Just way too&hellip; manual.</li>
+</ul>
+
+<aside class="notes"><ul>
+<li>Now is a great time to show a live example of a build/release pipeline layout and structure.</li>
+<li>Divorcing your pipelines from ADO pipeline artifacts gives greater control over your artifact longevity and forces you to design smarter pipelines.</li>
+</ul>
+</aside>
+
+</section><section>
+
+<p>The &lsquo;Multi-Stage pipeline&rsquo; has been released into preview.</p>
+
+<p>It overcomes some of the deficiences of the classic pipeline.</p>
+
+<p>I deploy these exclusively.</p>
+
+</section><section>
+
+<h3 id="multi-stage-pipelines">Multi-Stage Pipelines</h3>
+
+<ul>
+<li>Both build and release code can be expressed as YAML and shifted left</li>
+<li>The introduction of &lsquo;environments&rsquo; for deployments</li>
+<li>Can create templatized code for pipelines in another git repo</li>
+<li>Can reference, trigger, and pull artifacts from other pipelines</li>
+</ul>
+
+</section><section>
+
+<h3 id="multi-stage-limitations">Multi-Stage Limitations</h3>
+
+<ul>
+<li>To use the deployment element a pipeline artifact MUST have been created</li>
+<li>Manual intervention of deployments is limited to &lsquo;Environments&rsquo;</li>
+<li>It is bleeding edge</li>
+</ul>
+
+<aside class="notes"><ul>
+<li>Now is a great time to show a live example of multi-stage pipelines.</li>
+<li>Anything called &lsquo;classic&rsquo; is usually fast on its way to deprecation.</li>
+</ul>
+</aside>
 
 </section>
 </section>
@@ -371,7 +505,7 @@ Governance/Security
 </span></li>
 <li><span class='fragment '
 >
-Git branch models rule
+Establish a git branch model
 </span></li>
 <li><span class='fragment '
 >
@@ -387,22 +521,131 @@ Learn Agile
 </span></li>
 </ul>
 
-<p><aside class="notes"><ul>
-<li>Data scientists create models more like artists than programmers.</li>
-<li>Their output is primarily the models they construct.</li>
-</ul>
-</aside>
-</section></p>
-</section>
-    <p>
-<section data-noprocess data-shortcode-slide
-      id="modelbreakers"
-      data-transition="concave">
-  
-<section data-shortcode-section>
-<h1 id="model-breakers">Model Breakers</h1></p>
+</section><section>
 
-<p>Some IT does not easily fit into the traditional DevOps CICD model:</p>
+<p>And a few more&hellip;</p>
+
+<ul>
+<li><span class='fragment '
+>
+Model the 12-factor app approach
+</span></li>
+<li><span class='fragment '
+>
+Build once
+</span></li>
+<li><span class='fragment '
+>
+All pipeline as code
+</span></li>
+<li><span class='fragment '
+>
+Immutable artifacts
+</span></li>
+<li><span class='fragment '
+>
+Shift left all that you can
+</span></li>
+</ul>
+
+</section><section>
+
+<p>And yet more&hellip;</p>
+
+<ul>
+<li><span class='fragment '
+>
+Create an umbrella repo
+</span></li>
+<li><span class='fragment '
+>
+Everything is a container
+</span></li>
+<li><span class='fragment '
+>
+Reduce outside dependencies
+</span></li>
+<li><span class='fragment '
+>
+Versioning, don&#39;t leave it until last
+</span></li>
+<li><span class='fragment '
+>
+Don&#39;t become a prisoner to the pipelines (be able to build/deploy locally)
+</span></li>
+</ul>
+
+</section><section>
+
+<p>Finally,</p>
+
+<ul>
+<li><span class='fragment '
+>
+If you lose velocity, nothing above matters
+</span></li>
+</ul>
+
+<p></section></p>
+</section>
+    
+<section data-noprocess data-shortcode-slide
+      data-background-image="./images/background6.jpg"
+      data-background-position="center"
+      data-background-size="100%"
+      id="dataops"
+      data-transition="convex">
+  
+
+<section data-shortcode-section>
+<h2 id="dataops">DataOps</h2>
+
+<p>Data schema is just as important as the code itself.</p>
+
+<ul>
+<li>Do not forget to include a baseline and strategy for persistent data schema deployment in your pipeline.</li>
+<li>A database change should be subject to the same build/release cadence as the rest of the project.</li>
+</ul>
+
+</section><section>
+
+<h2 id="database-schemas">Database Schemas</h2>
+
+<ul>
+<li>Persistent data always has a schema</li>
+<li>This schema is closely bound to the application release cadence</li>
+<li>The versioned schema should be in version control</li>
+<li>The schema should be released with the engine level release pipeline</li>
+</ul>
+
+</section><section>
+
+<h2 id="dataops-terms">DataOps Terms</h2>
+
+<p>A few quick terms to know.</p>
+
+<ul>
+<li>Migration - Schema update</li>
+<li>Baseline - The &lsquo;first&rsquo; schema</li>
+</ul>
+
+</section><section>
+
+<h2 id="dataops-tools">DataOps Tools</h2>
+
+<p>Some tools exist to facilitate CICD in pipelines. A few are;</p>
+
+<ul>
+<li>Liquibase (liquibase.org)</li>
+<li>Flyway (flywaydb.org)</li>
+<li>Sqitch (sqitch.org)</li>
+</ul>
+
+</section><section>
+
+<h2 id="model-breakers">Model Breakers</h2>
+
+<p>Some IT not easily fit into the traditional DevOps CICD model:</p>
 
 <ul>
 <li><span class='fragment '
@@ -413,35 +656,40 @@ Data Science
 >
 Data Engineering
 </span></li>
-<li><span class='fragment '
->
-Data Anything
-</span></li>
 </ul>
 
-<p><aside class="notes"><ul>
-<li>Data scientists create models more like artists than programmers.</li>
+<aside class="notes"><ul>
+<li>Data scientists create models more like artists than programmers. They work with already cleaned data to extract value from it with things like machine learning and witchcraft.</li>
 <li>Their output is primarily the models they construct.</li>
 </ul>
 </aside>
-</section></p>
+
+</section>
 </section>
     
-
-
 <section data-noprocess data-shortcode-slide
       id="references"
       data-transition="convex">
   
 
+<section data-shortcode-section>
 <h2 id="references">References</h2>
 
 <ul>
 <li>Three ways of devops - <a href="https://itrevolution.com/the-three-ways-principles-underpinning-devops/">https://itrevolution.com/the-three-ways-principles-underpinning-devops/</a></li>
+<li></li>
+</ul>
+
+</section><section>
+
+<p>This presentation was made with:</p>
+
+<ul>
 <li>hugo - <a href="https://gohugo.io/">https://gohugo.io/</a></li>
 <li>reveal.js - <a href="https://github.com/hakimel/reveal.js">https://github.com/hakimel/reveal.js</a></li>
 <li>render.com - Hosts <a href="https://decks.loeber.live">https://decks.loeber.live</a> (this presentation)</li>
 </ul>
+</section>
 </section>
 
 </div>
