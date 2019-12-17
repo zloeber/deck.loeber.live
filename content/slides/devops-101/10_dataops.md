@@ -17,17 +17,22 @@ weight = 100
 
 Data schema is just as important as the code itself. 
 
-- Do not forget to include a baseline and strategy for persistent data schema deployment in your pipeline.
+- Include a baseline and strategy for persistent data schema deployment in your pipeline.
 - A database change should be subject to the same build/release cadence as the rest of the project.
+
+{{% note %}}
+- It is easy to forget or ignore this aspect of a deployment
+{{% /note %}}
 
 ---
 
 ## Database Schemas
 
 - Persistent data always has a schema
-- This schema is closely bound to the application release cadence
+- This schema is closely bound to the application
 - The versioned schema should be in version control
-- The schema should be released with the engine level release pipeline
+- This schema should be released with the app
+- For obvious reasons, this should be idempotent
 
 ---
 

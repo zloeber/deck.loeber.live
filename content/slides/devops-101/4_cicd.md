@@ -96,14 +96,4 @@ A great conceptual model (Jenkins-x).
 Even though this model was put together purely for cloud native deployments it helps understand how teams, the business, and CICD are interelated. I've personally used similar types of logical models when fielding multiple team's devops needs.
 {{% /note %}}
 
----
-
-## CI (Building)
-
-The build process is generally broken into the following parts
-
-- {{< frag c="*Build*" >}}
-- {{< frag c="*Tag*" >}}
-- {{< frag c="*Push*" >}}
-
 {{% /section %}}

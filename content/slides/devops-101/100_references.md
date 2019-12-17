@@ -8,15 +8,18 @@ weight = 1000
 {{% section %}}
 
 ## References
+
 - Three ways of devops - <https://itrevolution.com/the-three-ways-principles-underpinning-devops/>
-- 
+- 12-factor app - <https://12factor.net/>
 
 ---
 
-This presentation was made with:
+This presentation made with:
 
+- Github - <https://github.com/zloeber/deck.loeber.live>
+- ADO Pipelines - <https://github.com/zloeber/azure-pipeline-library>
 - hugo - <https://gohugo.io/>
 - reveal.js - <https://github.com/hakimel/reveal.js>
-- render.com - Hosts https://decks.loeber.live (this presentation)
+- render.com - Hosts https://decks.loeber.live
 
 {{% /section %}}
