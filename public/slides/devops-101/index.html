@@ -267,27 +267,6 @@ DevOps has paved the way with well defined models to achieve the <strong>3-ways<
 <aside class="notes"><p>Even though this model was put together purely for cloud native deployments it helps understand how teams, the business, and CICD are interelated. I&rsquo;ve personally used similar types of logical models when fielding multiple team&rsquo;s devops needs.</p>
 </aside>
 
-</section><section>
-
-<h2 id="ci-building">CI (Building)</h2>
-
-<p>The build process is generally broken into the following parts</p>
-
-<ul>
-<li><span class='fragment '
->
-<em>Build</em>
-</span></li>
-<li><span class='fragment '
->
-<em>Tag</em>
-</span></li>
-<li><span class='fragment '
->
-<em>Push</em>
-</span></li>
-</ul>
-
 </section>
 </section>
     
@@ -360,7 +339,7 @@ Governance/Security
 </section>
     
 <section data-noprocess data-shortcode-slide
-      data-background-image="./images/darkbackground1.jpg"
+      data-background-image="./images/darkbackground3.jpg"
       data-background-position="center"
       data-background-size="100%"
       id="pipelines"
@@ -488,6 +467,89 @@ Release Pipeline
 
 </section>
 </section>
+    
+<section data-noprocess data-shortcode-slide
+      data-background-image="./images/darkbackground2.jpg"
+      data-background-position="center"
+      data-background-size="100%"
+      id="build"
+      data-transition="concave">
+  
+
+<section data-shortcode-section>
+</section><section>
+
+<h2 id="ci-building">CI (Building)</h2>
+
+<p>The build process is generally broken into the following parts</p>
+
+<ul>
+<li><span class='fragment '
+>
+<em>Build</em>
+</span></li>
+<li><span class='fragment '
+>
+<em>Tag</em>
+</span></li>
+<li><span class='fragment '
+>
+<em>Push</em>
+</span></li>
+</ul>
+
+</section><section>
+
+<h2 id="git-branch-strategies">Git Branch Strategies</h2>
+
+<p>Build operations will be closely aligned with the chosen git strategy.</p>
+
+<p>Common models include:</p>
+
+<ul>
+<li><span class='fragment '
+>
+Single Master
+</span></li>
+<li><span class='fragment '
+>
+Git Flow*
+</span></li>
+<li><span class='fragment '
+>
+GitHub Flow
+</span></li>
+<li><span class='fragment '
+>
+Forking
+</span></li>
+</ul>
+
+<aside class="notes"><ul>
+<li>* Almost every model draws some ideas from gitflow so it is a good place to start getting confused.</li>
+</ul>
+</aside>
+
+</section><section>
+
+<h2 id="git-notes">Git Notes</h2>
+
+<ul>
+<li>Your dev team will drive the git branching strategy</li>
+<li>GitFlow does not account for multiple environments</li>
+<li>Pull Request actions and branch policies are not native to git</li>
+<li>Submodules obfuscate a repo&rsquo;s depth</li>
+<li>Git hooks are super handy (but I don&rsquo;t use them)</li>
+</ul>
+
+<h2 id="learning-git">Learning Git</h2>
+
+<p>Just read the manpages, it is easy!</p>
+
+<p>Git man page generator -&gt; <a href="https://git-man-page-generator.lokaltog.net/">https://git-man-page-generator.lokaltog.net/</a></p>
+
+</section>
+</section>
     <p>
 <section data-noprocess data-shortcode-slide
       id="lessons"
@@ -496,30 +558,40 @@ Release Pipeline
 <section data-shortcode-section>
 <h3 id="lessons-learned">Lessons Learned</h3></p>
 
-<p>There are many best practices for DevOps, these are some I hope stick.</p>
+<p>There are many best practices for DevOps.</p>
+
+<p>Here are a few from the field&hellip;</p>
+
+</section><section>
 
 <ul>
 <li><span class='fragment '
 >
-&#39;Latest&#39; tag is evil
+Work towards a regular release cadence
 </span></li>
 <li><span class='fragment '
 >
-Establish a git branch model
+Establish a git branch strategy early
 </span></li>
 <li><span class='fragment '
 >
-Firm divide between CI &amp; CD
+Cement a divide between CI &amp; CD
 </span></li>
 <li><span class='fragment '
 >
-Start a release cadence
+Learn some Agile
 </span></li>
 <li><span class='fragment '
 >
-Learn Agile
+&#39;Latest&#39; tag is the devil
 </span></li>
 </ul>
+
+<aside class="notes"><ul>
+<li>Release cadence == Scheduled version releases of your code (technically a old-school release model)</li>
+<li>Divorcing your pipelines from ADO pipeline artifacts gives greater control over your artifact longevity and forces you to design smarter pipelines.</li>
+</ul>
+</aside>
 
 </section><section>
 
@@ -532,11 +604,11 @@ Model the 12-factor app approach
 </span></li>
 <li><span class='fragment '
 >
-Build once
+Build only once
 </span></li>
 <li><span class='fragment '
 >
-All pipeline as code
+All pipeline as code if possible
 </span></li>
 <li><span class='fragment '
 >
@@ -571,7 +643,7 @@ Versioning, don&#39;t leave it until last
 </span></li>
 <li><span class='fragment '
 >
-Don&#39;t become a prisoner to the pipelines (be able to build/deploy locally)
+Be able to build/deploy locally
 </span></li>
 </ul>
 
@@ -580,10 +652,15 @@ Don&#39;t become a prisoner to the pipelines (be able to build/deploy locally)
 <p>Finally,</p>
 
 <ul>
-<li><span class='fragment '
+<li><p><span class='fragment '
 >
-If you lose velocity, nothing above matters
-</span></li>
+If you implement DevOps correctly you WILL lose velocity, at first.
+</span></p></li>
+
+<li><p><span class='fragment '
+>
+It gets better
+</span></p></li>
 </ul>
 
 <p></section></p>
@@ -603,9 +680,14 @@ If you lose velocity, nothing above matters
 <p>Data schema is just as important as the code itself.</p>
 
 <ul>
-<li>Do not forget to include a baseline and strategy for persistent data schema deployment in your pipeline.</li>
+<li>Include a baseline and strategy for persistent data schema deployment in your pipeline.</li>
 <li>A database change should be subject to the same build/release cadence as the rest of the project.</li>
 </ul>
+
+<aside class="notes"><ul>
+<li>It is easy to forget or ignore this aspect of a deployment</li>
+</ul>
+</aside>
 
 </section><section>
 
@@ -613,9 +695,10 @@ If you lose velocity, nothing above matters
 
 <ul>
 <li>Persistent data always has a schema</li>
-<li>This schema is closely bound to the application release cadence</li>
+<li>This schema is closely bound to the application</li>
 <li>The versioned schema should be in version control</li>
-<li>The schema should be released with the engine level release pipeline</li>
+<li>This schema should be released with the app</li>
+<li>For obvious reasons, this should be idempotent</li>
 </ul>
 
 </section><section>
@@ -677,17 +760,19 @@ Data Engineering
 
 <ul>
 <li>Three ways of devops - <a href="https://itrevolution.com/the-three-ways-principles-underpinning-devops/">https://itrevolution.com/the-three-ways-principles-underpinning-devops/</a></li>
-<li></li>
+<li>12-factor app - <a href="https://12factor.net/">https://12factor.net/</a></li>
 </ul>
 
 </section><section>
 
-<p>This presentation was made with:</p>
+<p>This presentation made with:</p>
 
 <ul>
+<li>Github - <a href="https://github.com/zloeber/deck.loeber.live">https://github.com/zloeber/deck.loeber.live</a></li>
+<li>ADO Pipelines - <a href="https://github.com/zloeber/azure-pipeline-library">https://github.com/zloeber/azure-pipeline-library</a></li>
 <li>hugo - <a href="https://gohugo.io/">https://gohugo.io/</a></li>
 <li>reveal.js - <a href="https://github.com/hakimel/reveal.js">https://github.com/hakimel/reveal.js</a></li>
-<li>render.com - Hosts <a href="https://decks.loeber.live">https://decks.loeber.live</a> (this presentation)</li>
+<li>render.com - Hosts <a href="https://decks.loeber.live">https://decks.loeber.live</a></li>
 </ul>
 </section>
 </section>
