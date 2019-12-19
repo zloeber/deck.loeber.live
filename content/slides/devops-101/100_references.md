@@ -7,6 +7,12 @@ weight = 1000
 
 {{% section %}}
 
+{{% note %}}
+Intentionally left blank
+{{% /note %}}
+
+---
+
 ## References
 
 - Three ways of devops - <https://itrevolution.com/the-three-ways-principles-underpinning-devops/>

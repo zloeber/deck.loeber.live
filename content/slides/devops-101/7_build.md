@@ -13,6 +13,10 @@ weight = 70
 
 {{% section %}}
 
+{{% note %}}
+Intentionally left blank
+{{% /note %}}
+
 ---
 
 ## CI (Building)
@@ -49,6 +53,8 @@ Common models include:
 - Pull Request actions and branch policies are not native to git
 - Submodules obfuscate a repo's depth
 - Git hooks are super handy (but I don't use them)
+
+---
 
 ## Learning Git
 

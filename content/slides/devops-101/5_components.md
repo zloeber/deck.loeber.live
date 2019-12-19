@@ -12,6 +12,13 @@ weight = 50
 >}}
 
 {{% section %}}
+
+{{% note %}}
+Intentionally left blank
+{{% /note %}}
+
+---
+
 ## DevOps Components
 
 DevOps takes many forms but ultimately boils down to a handful of components working together;
@@ -40,7 +47,7 @@ Anything more advanced usually include
 
 1. {{< frag c="Service Endpoints (Secrets)" >}}
 1. {{< frag c="Metadata Management (Parameters)" >}}
-1. {{< frag c="Workload Sizing ()" >}}
+1. {{< frag c="Workload Sizing (autoscaling)" >}}
 1. {{< frag c="Gates/Approvals/Processes" >}}
 1. {{< frag c="Governance/Security" >}}
 

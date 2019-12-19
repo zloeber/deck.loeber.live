@@ -6,6 +6,12 @@ weight = 90
 {{< slide id="lessons" transition="slide" >}}
 {{% section %}}
 
+{{% note %}}
+Intentionally left blank
+{{% /note %}}
+
+---
+
 ### Lessons Learned
 
 There are many best practices for DevOps.
