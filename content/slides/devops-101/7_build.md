@@ -21,7 +21,7 @@ Intentionally left blank
 
 ## CI (Building)
 
-The build process is generally broken into the following parts
+The build process can be substantially more difficult than the deploy but is generally broken into the following parts
 
 - {{< frag c="*Build*" >}}
 - {{< frag c="*Tag*" >}}
