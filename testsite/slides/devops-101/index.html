@@ -279,6 +279,11 @@ DevOps has paved the way with well defined models to achieve the <strong>3-ways<
   
 
 <section data-shortcode-section>
+<aside class="notes"><p>Intentionally left blank</p>
+</aside>
+
+</section><section>
+
 <h2 id="devops-components">DevOps Components</h2>
 
 <p>DevOps takes many forms but ultimately boils down to a handful of components working together;</p>
@@ -319,7 +324,7 @@ Metadata Management (Parameters)
 </span></li>
 <li><span class='fragment '
 >
-Workload Sizing ()
+Workload Sizing (autoscaling)
 </span></li>
 <li><span class='fragment '
 >
@@ -477,11 +482,14 @@ Release Pipeline
   
 
 <section data-shortcode-section>
+<aside class="notes"><p>Intentionally left blank</p>
+</aside>
+
 </section><section>
 
 <h2 id="ci-building">CI (Building)</h2>
 
-<p>The build process is generally broken into the following parts</p>
+<p>The build process can be substantially more difficult than the deploy but is generally broken into the following parts</p>
 
 <ul>
 <li><span class='fragment '
@@ -542,11 +550,120 @@ Forking
 <li>Git hooks are super handy (but I don&rsquo;t use them)</li>
 </ul>
 
+</section><section>
+
 <h2 id="learning-git">Learning Git</h2>
 
 <p>Just read the manpages, it is easy!</p>
 
 <p>Git man page generator -&gt; <a href="https://git-man-page-generator.lokaltog.net/">https://git-man-page-generator.lokaltog.net/</a></p>
+
+</section>
+</section>
+    
+<section data-noprocess data-shortcode-slide
+      data-background-image="./images/darkbackground2.jpg"
+      data-background-position="center"
+      data-background-size="100%"
+      id="build"
+      data-transition="concave">
+  
+
+<section data-shortcode-section>
+<aside class="notes"><p>Intentionally left blank</p>
+</aside>
+
+</section><section>
+
+<h2 id="strong-pipelines">Strong Pipelines</h2>
+
+<p>The stronger your pipeline is, the less you have to support it.</p>
+
+</section><section>
+
+<p>What makes a <strong>strong</strong> pipeline?</p>
+
+<ul>
+<li><span class='fragment '
+>
+Few outside dependencies
+</span></li>
+<li><span class='fragment '
+>
+Simplicity
+</span></li>
+<li><span class='fragment '
+>
+Immutability
+</span></li>
+</ul>
+
+</section><section>
+
+<h2 id="outside-dependencies">Outside Dependencies</h2>
+
+<p>What is an <strong>outside dependency</strong>? (see if you can find the pattern);</p>
+
+<ul>
+<li><span class='fragment '
+>
+Public Docker Images
+</span></li>
+<li><span class='fragment '
+>
+Public Upstream Libraries
+</span></li>
+<li><span class='fragment '
+>
+Public Pipeline Tasks
+</span></li>
+<li><span class='fragment '
+>
+Public Helm Charts
+</span></li>
+</ul>
+
+</section><section>
+
+<h2 id="simpler-pipelines">Simpler Pipelines</h2>
+
+<p>What makes <strong>simpler</strong> pipelines?</p>
+
+<ul>
+<li><span class='fragment '
+>
+Pipeline as code
+</span></li>
+<li><span class='fragment '
+>
+Less delivery code
+</span></li>
+<li><span class='fragment '
+>
+Fewer Moving Parts
+</span></li>
+</ul>
+
+</section><section>
+
+<h3 id="immutability">Immutability</h3>
+
+<p>What is <strong>Immutability</strong> in a pipeline?</p>
+
+<ul>
+<li><span class='fragment '
+>
+Clear division between CI and CD
+</span></li>
+<li><span class='fragment '
+>
+Less delivery code
+</span></li>
+<li><span class='fragment '
+>
+Eliminate &#39;ClickOps&#39;
+</span></li>
+</ul>
 
 </section>
 </section>
@@ -556,7 +673,12 @@ Forking
       data-transition="slide">
   
 <section data-shortcode-section>
-<h3 id="lessons-learned">Lessons Learned</h3></p>
+<aside class="notes"><p>Intentionally left blank</p>
+</aside></p>
+
+</section><section>
+
+<h3 id="lessons-learned">Lessons Learned</h3>
 
 <p>There are many best practices for DevOps.</p>
 
@@ -756,6 +878,11 @@ Data Engineering
   
 
 <section data-shortcode-section>
+<aside class="notes"><p>Intentionally left blank</p>
+</aside>
+
+</section><section>
+
 <h2 id="references">References</h2>
 
 <ul>
@@ -774,6 +901,7 @@ Data Engineering
 <li>reveal.js - <a href="https://github.com/hakimel/reveal.js">https://github.com/hakimel/reveal.js</a></li>
 <li>render.com - Hosts <a href="https://decks.loeber.live">https://decks.loeber.live</a></li>
 </ul>
+
 </section>
 </section>
 
